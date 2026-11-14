@@ -1342,3 +1342,335 @@ org.knime.core.node.InvalidSettingsException: Please specify a file
 2026-11-10 21:54:22,378 : INFO  : Node Repository Initializer :  : DBDriverRegistry :  :  : Could not find any driver for DBType: DBType(id=oracle, name=Oracle, description=null)
 2026-11-10 21:54:22,381 : INFO  : Node Repository Initializer :  : DBDriverRegistry :  :  : Could not find any driver for DBType: DBType(id=oracle, name=Oracle, description=null)
 2026-11-10 21:55:14,671 : INFO  : KNIME shutdown hooks - org.knime.core.util.FileUtil$$Lambda/0x000001f6c35129f8 :  : FileUtil :  :  : Deleting 3 temporary files.
+2026-11-14 13:23:24,831 : INFO  : main :  : NodeLogger :  :  : #########################################################################################
+2026-11-14 13:23:24,832 : INFO  : main :  : NodeLogger :  :  : #                                                                                       #
+2026-11-14 13:23:24,832 : INFO  : main :  : NodeLogger :  :  : # Welcome to KNIME Analytics Platform v5.12.0.v202606180846 (Build June 15, 2026)       #
+2026-11-14 13:23:24,832 : INFO  : main :  : NodeLogger :  :  : # Based on Eclipse, http://www.eclipse.org                                              #
+2026-11-14 13:23:24,832 : INFO  : main :  : NodeLogger :  :  : #                                                                                       #
+2026-11-14 13:23:24,832 : INFO  : main :  : NodeLogger :  :  : #########################################################################################
+2026-11-14 13:23:24,832 : INFO  : main :  : NodeLogger :  :  : #                                                                                       #
+2026-11-14 13:23:24,832 : INFO  : main :  : NodeLogger :  :  : # Copyright by KNIME AG, Zurich, Switzerland and others.                                #
+2026-11-14 13:23:24,832 : INFO  : main :  : NodeLogger :  :  : # Website: http://www.knime.com                                                         #
+2026-11-14 13:23:24,832 : INFO  : main :  : NodeLogger :  :  : # E-mail: contact@knime.com                                                             #
+2026-11-14 13:23:24,832 : INFO  : main :  : NodeLogger :  :  : #                                                                                       #
+2026-11-14 13:23:24,832 : INFO  : main :  : NodeLogger :  :  : #########################################################################################
+2026-11-14 13:23:24,832 : INFO  : main :  : NodeLogger :  :  : # For more details see the KNIME log file:                                              #
+2026-11-14 13:23:24,833 : INFO  : main :  : NodeLogger :  :  : # E:\shourov\studies\sem 6\COS30045\Data Vis Design Proect\KNIME_Workflow\.metadata\knime\knime.log
+2026-11-14 13:23:24,833 : INFO  : main :  : NodeLogger :  :  : #---------------------------------------------------------------------------------------#
+2026-11-14 13:23:24,848 : INFO  : main :  : NodeLogger :  :  : # logging date=Sat Nov 14 13:23:24 MYT 2026
+2026-11-14 13:23:24,848 : INFO  : main :  : NodeLogger :  :  : # java.version=21.0.9
+2026-11-14 13:23:24,848 : INFO  : main :  : NodeLogger :  :  : # java.vm.version=21.0.9+10-LTS
+2026-11-14 13:23:24,848 : INFO  : main :  : NodeLogger :  :  : # java.vendor=Eclipse Adoptium
+2026-11-14 13:23:24,848 : INFO  : main :  : NodeLogger :  :  : # os.name=Windows 11
+2026-11-14 13:23:24,849 : INFO  : main :  : NodeLogger :  :  : # os.arch=amd64
+2026-11-14 13:23:24,849 : INFO  : main :  : NodeLogger :  :  : # number of CPUs=6
+2026-11-14 13:23:24,849 : INFO  : main :  : NodeLogger :  :  : # assertions=off
+2026-11-14 13:23:24,856 : INFO  : main :  : NodeLogger :  :  : # host=DESKTOP-KGSP5T3
+2026-11-14 13:23:24,859 : INFO  : main :  : NodeLogger :  :  : # username=Dying
+2026-11-14 13:23:24,860 : INFO  : main :  : NodeLogger :  :  : # max mem=8172MB
+2026-11-14 13:23:24,861 : INFO  : main :  : NodeLogger :  :  : # application=org.knime.product.KNIME_APPLICATION
+2026-11-14 13:23:24,869 : INFO  : main :  : NodeLogger :  :  : # KNID=11-60d8b6d7a7a41357-01-bc4c82e6b4c52f33
+2026-11-14 13:23:24,869 : INFO  : main :  : NodeLogger :  :  : #########################################################################################
+2026-11-14 13:23:20,101 : INFO  : main :  : RegisterBouncyCastleProvider :  :  : Added BouncyCastleProvider to Java Security providers
+2026-11-14 13:23:27,619 : INFO  : main :  : StringHistory :  :  : History file 'E:\shourov\studies\sem 6\COS30045\Data Vis Design Proect\KNIME_Workflow\.metadata\knime\history_database_drivers.txt' does not exist.
+2026-11-14 13:23:27,631 : INFO  : main :  : StringHistory :  :  : History file 'E:\shourov\studies\sem 6\COS30045\Data Vis Design Proect\KNIME_Workflow\.metadata\knime\history_database_urls.txt' does not exist.
+2026-11-14 13:23:29,972 : INFO  : Node Repository Initializer :  : StringHistory :  :  : History file 'E:\shourov\studies\sem 6\COS30045\Data Vis Design Proect\KNIME_Workflow\.metadata\knime\history_string2date-formats.txt' does not exist.
+2026-11-14 13:23:29,986 : INFO  : Node Repository Initializer :  : MovingAggregationNodeFactory :  :  : Modern dialog for Moving Aggregator node can be enabled via system property "org.knime.base.node.preproc.groupby.dialog". Note: This property will be removed in a future version.
+
+2026-11-14 13:23:32,624 : INFO  : main :  : ProcessWatchdog :  :  : KNIME Process Watchdog memory limit not configured
+2026-11-14 13:23:32,625 : INFO  : main :  : ProcessWatchdog :  :  : External process memory watchdog is disabled, because the memory limit is set to -1
+2026-11-14 13:23:32,957 : INFO  : Node Repository Initializer :  : GroupByNodeFactory :  :  : Modern dialog for GroupBy node can be enabled via system property "org.knime.base.node.preproc.groupby.dialog". Note: This property will be removed in a future version.
+
+2026-11-14 13:23:33,554 : INFO  : main :  : StringHistory :  :  : History file 'E:\shourov\studies\sem 6\COS30045\Data Vis Design Proect\KNIME_Workflow\.metadata\knime\history_org.knime.kerberos.name.txt' does not exist.
+2026-11-14 13:23:33,856 : INFO  : Node Repository Initializer :  : StringHistory :  :  : History file 'E:\shourov\studies\sem 6\COS30045\Data Vis Design Proect\KNIME_Workflow\.metadata\knime\history_createFileNameHistoryKey.txt' does not exist.
+2026-11-14 13:23:33,993 : INFO  : Node Repository Initializer :  : Pivot2NodeFactory :  :  : Modern dialog for Pivot node can be enabled via system property "org.knime.base.node.preproc.groupby.dialog". Note: This property will be removed in a future version.
+
+2026-11-14 13:23:34,829 : INFO  : Node Repository Initializer :  : ColumnAggregatorNodeFactory :  :  : Modern dialog for Column Aggregator node can be enabled via system property "org.knime.base.node.preproc.groupby.dialog". Note: This property will be removed in a future version.
+
+2026-11-14 13:23:35,142 : INFO  : Thread-176 :  : KnimeBrowserView :  :  : %cinfo%c Injecting global logger 
+      background: #00BCD4;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      (source: https://org.knime.ui.java/editor/assets/editor-CIijjzSo.js; line: 55)
+2026-11-14 13:23:36,103 : INFO  : Node Repository Initializer :  : DBDriverRegistry :  :  : Could not find any driver for DBType: DBType(id=vertica, name=Vertica, description=Vertica Analytics Platform)
+2026-11-14 13:23:36,175 : INFO  : Node Repository Initializer :  : DBDriverRegistry :  :  : Could not find any driver for DBType: DBType(id=vertica, name=Vertica, description=Vertica Analytics Platform)
+2026-11-14 13:23:36,196 : INFO  : Node Repository Initializer :  : DBDriverRegistry :  :  : Could not find any driver for DBType: DBType(id=vertica, name=Vertica, description=Vertica Analytics Platform)
+2026-11-14 13:23:36,254 : INFO  : Node Repository Initializer :  : DBDriverRegistry :  :  : Could not find any driver for DBType: DBType(id=mssqlserver, name=Microsoft SQL Server, description=null)
+2026-11-14 13:23:36,254 : INFO  : Node Repository Initializer :  : DBDriverRegistry :  :  : Could not find any driver for DBType: DBType(id=mssqlserver, name=Microsoft SQL Server, description=null)
+2026-11-14 13:23:36,268 : INFO  : Node Repository Initializer :  : DBDriverRegistry :  :  : Could not find any driver for DBType: DBType(id=mssqlserver, name=Microsoft SQL Server, description=null)
+2026-11-14 13:23:36,275 : INFO  : Node Repository Initializer :  : DBDriverRegistry :  :  : Could not find any driver for DBType: DBType(id=oracle, name=Oracle, description=null)
+2026-11-14 13:23:36,301 : INFO  : Node Repository Initializer :  : DBDriverRegistry :  :  : Could not find any driver for DBType: DBType(id=oracle, name=Oracle, description=null)
+2026-11-14 13:23:36,301 : INFO  : Node Repository Initializer :  : DBDriverRegistry :  :  : Could not find any driver for DBType: DBType(id=oracle, name=Oracle, description=null)
+2026-11-14 13:23:36,790 : WARN  : ModalContext :  : Node : Bar Chart : 3:16 : There are rows with missing values in one of the selected frequency columns. These frequencies are not displayed for this row.
+2026-11-14 13:23:38,568 : ERROR : KNIME-Worker-0 :  : DesktopAPUtil :  :  : Could not check for updates
+java.io.IOException: Read timed out, while checking updates for site at "https://update.knime.com/community-contributions/trusted/5.12".
+	at org.knime.core.eclipseUtil.UpdateChecker.checkForNewRelease(UpdateChecker.java:201)
+	at org.knime.product.rcp.intro.UpdateDetector.checkForNewRelease(UpdateDetector.java:97)
+	at org.knime.ui.java.util.DesktopAPUtil.checkForUpdate(DesktopAPUtil.java:221)
+	at org.knime.gateway.impl.webui.UpdateStateProvider.lambda$0(UpdateStateProvider.java:86)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:143)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:277)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl.read(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(Unknown Source)
+	at java.base/java.net.Socket$SocketInputStream.read(Unknown Source)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(Unknown Source)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(Unknown Source)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(Unknown Source)
+	at java.base/sun.security.ssl.SSLTransport.decode(Unknown Source)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(Unknown Source)
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(Unknown Source)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsClient.afterConnect(Unknown Source)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(Unknown Source)
+	at org.knime.core.eclipseUtil.UpdateChecker.checkForNewRelease(UpdateChecker.java:183)
+	... 7 more
+2026-11-14 13:23:40,172 : WARN  : comm-pool-thread-2 :  : JsonRpcErrorResolver :  :  : An unexpected json rpc error occurred
+java.lang.IllegalStateException: K-AI is not connected to a hub. Select a hub on the AI Assistant preference page.
+	at org.knime.ai.assistant.java.UiStringsUtils.getUiStrings(UiStringsUtils.java:84)
+	at org.knime.ai.assistant.java.ChatBackend.getUiStrings(ChatBackend.java:278)
+	at java.base/java.util.Optional.map(Unknown Source)
+	at org.knime.gateway.impl.webui.service.DefaultKaiService.getUiStrings(DefaultKaiService.java:165)
+	at org.knime.gateway.impl.webui.jsonrpc.service.JsonRpcKaiServiceWrapper.getUiStrings(JsonRpcKaiServiceWrapper.java:105)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at com.googlecode.jsonrpc4j.JsonRpcBasicServer.invoke(JsonRpcBasicServer.java:478)
+	at com.googlecode.jsonrpc4j.JsonRpcBasicServer.handleObject(JsonRpcBasicServer.java:349)
+	at com.googlecode.jsonrpc4j.JsonRpcBasicServer.handleJsonNodeRequest(JsonRpcBasicServer.java:274)
+	at com.googlecode.jsonrpc4j.JsonRpcBasicServer.handleRequest(JsonRpcBasicServer.java:242)
+	at org.knime.gateway.impl.jsonrpc.JsonRpcRequestHandler.handle(JsonRpcRequestHandler.java:112)
+	at org.knime.ui.java.browser.lifecycle.Init.lambda$16(Init.java:347)
+	at com.equo.comm.common.MessageHandler.processReceivedEventMessage(MessageHandler.java:131)
+	at com.equo.comm.ee.provider.service.ChromiumService.receiveMessage(ChromiumService.java:98)
+	at com.equo.comm.ee.provider.CommunicationManagerChromiumImpl.receiveMessage(CommunicationManagerChromiumImpl.java:48)
+	at com.equo.chromium.swt.internal.spi.CommRouterHandler.handleRequest(CommRouterHandler.java:33)
+	at com.equo.chromium.swt.internal.spi.CommRouterHandler.lambda$1(CommRouterHandler.java:51)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-11-14 13:23:40,181 : ERROR : Thread-1653 :  : KnimeBrowserView :  :  : %cerror%c Failed to fetch UI strings from AI provider 
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      [object Object] (source: https://org.knime.ui.java/editor/assets/editor-CIijjzSo.js; line: 55)
+2026-11-14 13:27:44,569 : INFO  : KNIME-Worker-1-Column Filter 3:48 :  : LocalNodeExecutionJob : Column Filter : 3:48 : Column Filter 3:48 End execute (0 secs)
+2026-11-14 13:29:27,157 : INFO  : KNIME-Worker-1-Column Renamer 3:49 :  : LocalNodeExecutionJob : Column Renamer : 3:49 : Column Renamer 3:49 End execute (0 secs)
+2026-11-14 13:29:54,384 : INFO  : main :  : LifeCycle :  :  : State transition 'SAVE_STATE' aborted
+2026-11-14 13:30:35,781 : INFO  : KNIME-Worker-4-Row Filter 3:50 :  : LocalNodeExecutionJob : Row Filter : 3:50 : Row Filter 3:50 End execute (0 secs)
+2026-11-14 13:33:39,215 : INFO  : KNIME-Worker-5-Rule Engine 3:51 :  : LocalNodeExecutionJob : Rule Engine : 3:51 : Rule Engine 3:51 End execute (0 secs)
+2026-11-14 13:38:55,365 : WARN  : comm-pool-thread-8 :  : Node : GroupBy : 3:52 : No grouping column included. Aggregate complete table.
+2026-11-14 13:38:55,366 : WARN  : comm-pool-thread-8 :  : Node : GroupBy : 3:52 : No aggregation column defined
+2026-11-14 13:38:55,368 : WARN  : comm-pool-thread-8 :  : Node : GroupBy : 3:52 : Please select at least one group or aggregation column
+2026-11-14 13:40:31,042 : INFO  : KNIME-Worker-6-GroupBy 3:52 :  : LocalNodeExecutionJob : GroupBy : 3:52 : GroupBy 3:52 End execute (0 secs)
+2026-11-14 13:43:56,549 : WARN  : comm-pool-thread-9 :  : Node : Math Formula : 3:53 : No configuration available
+2026-11-14 13:44:24,927 : INFO  : KNIME-Worker-7-Math Formula 3:53 :  : LocalNodeExecutionJob : Math Formula : 3:53 : Math Formula 3:53 End execute (0 secs)
+2026-11-14 13:52:36,719 : WARN  : comm-pool-thread-9 :  : Node : CSV Writer : 3:54 : Please specify a file
+2026-11-14 13:53:21,977 : INFO  : KNIME-Worker-9-Row Filter 3:55 :  : LocalNodeExecutionJob : Row Filter : 3:55 : Row Filter 3:55 End execute (0 secs)
+2026-11-14 13:55:13,962 : INFO  : KNIME-Worker-10-Bar Chart 3:56 :  : LocalNodeExecutionJob : Bar Chart : 3:56 : Bar Chart 3:56 End execute (0 secs)
+2026-11-14 13:55:14,104 : WARN  : Thread-74578 :  : KnimeBrowserView :  :  : An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. (source: https://org.knime.core.ui.view/uiext-view/org.knime.base.views.node.barchart.BarChartNodeFactory/BarChart.html; line: 0)
+2026-11-14 13:55:15,999 : WARN  : Thread-75626 :  : CEFNodeView :  :  : An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. (source: https://org.knime.core.ui.view/uiext-view/org.knime.base.views.node.barchart.BarChartNodeFactory/BarChart.html; line: 0)
+2026-11-14 13:57:37,165 : WARN  : Thread-79572 :  : KnimeBrowserView :  :  : An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. (source: https://org.knime.core.ui.view/uiext-view/org.knime.base.views.node.barchart.BarChartNodeFactory/BarChart.html; line: 0)
+2026-11-14 13:58:56,606 : INFO  : KNIME-Worker-11-Bar Chart 3:57 :  : LocalNodeExecutionJob : Bar Chart : 3:57 : Bar Chart 3:57 End execute (0 secs)
+2026-11-14 13:58:56,683 : WARN  : Thread-86951 :  : KnimeBrowserView :  :  : An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. (source: https://org.knime.core.ui.view/uiext-view/org.knime.base.views.node.barchart.BarChartNodeFactory/BarChart.html; line: 0)
+2026-11-14 13:58:58,323 : WARN  : Thread-87825 :  : CEFNodeView :  :  : An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. (source: https://org.knime.core.ui.view/uiext-view/org.knime.base.views.node.barchart.BarChartNodeFactory/BarChart.html; line: 0)
+2026-11-14 14:01:22,551 : INFO  : KNIME-Worker-12-Bar Chart 3:58 :  : LocalNodeExecutionJob : Bar Chart : 3:58 : Bar Chart 3:58 End execute (0 secs)
+2026-11-14 14:01:22,634 : WARN  : Thread-96795 :  : KnimeBrowserView :  :  : An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. (source: https://org.knime.core.ui.view/uiext-view/org.knime.base.views.node.barchart.BarChartNodeFactory/BarChart.html; line: 0)
+2026-11-14 14:01:24,774 : WARN  : Thread-97986 :  : CEFNodeView :  :  : An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. (source: https://org.knime.core.ui.view/uiext-view/org.knime.base.views.node.barchart.BarChartNodeFactory/BarChart.html; line: 0)
+2026-11-14 14:07:05,060 : INFO  : KNIME-Worker-13-CSV Writer 3:54 :  : LocalNodeExecutionJob : CSV Writer : 3:54 : CSV Writer 3:54 End execute (0 secs)
+2026-11-14 14:25:25,333 : WARN  : comm-pool-thread-20 :  : Node : Excel Reader : 3:59 : Please specify a file
+2026-11-14 14:25:25,444 : WARN  : comm-pool-thread-20 :  : ExcelFileContentInfoStateProvider : Excel Reader : 3:59 : Could not read sheet names for suggestions.
+org.knime.core.node.InvalidSettingsException: Please specify a file
+	at org.knime.core.node.util.CheckUtils.checkSetting(CheckUtils.java:274)
+	at org.knime.core.node.util.CheckUtils.checkSetting(CheckUtils.java:224)
+	at org.knime.filehandling.core.defaultnodesettings.filechooser.AbstractFileChooserPathAccessor.getRootPath(AbstractFileChooserPathAccessor.java:319)
+	at org.knime.filehandling.core.defaultnodesettings.filechooser.AbstractFileChooserPathAccessor.getFSPaths(AbstractFileChooserPathAccessor.java:230)
+	at org.knime.filehandling.core.defaultnodesettings.filechooser.reader.ReadPathAccessor.getPaths(ReadPathAccessor.java:96)
+	at org.knime.ext.poi3.node.io.filehandling.excel.ExcelFileContentInfoStateProvider.computeState(ExcelFileContentInfoStateProvider.java:130)
+	at org.knime.ext.poi3.node.io.filehandling.excel.ExcelFileContentInfoStateProvider.computeState(ExcelFileContentInfoStateProvider.java:1)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.InvokeTrigger$ComputeVisitor.computeIndexedValue(InvokeTrigger.java:280)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.InvokeTrigger$ComputeVisitor.lambda$12(InvokeTrigger.java:267)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.base/java.util.AbstractList$RandomAccessSpliterator.forEachRemaining(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.toArray(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.toArray(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.toList(Unknown Source)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.InvokeTrigger$ComputeVisitor.computeStateVertexState(InvokeTrigger.java:268)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.InvokeTrigger$ComputeVisitor.lambda$0(InvokeTrigger.java:252)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.InvokeTrigger$ComputeVisitor.cached(InvokeTrigger.java:325)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.InvokeTrigger$ComputeVisitor.accept(InvokeTrigger.java:252)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.InvokeTrigger$ComputeVisitor.accept(InvokeTrigger.java:1)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.StateVertex.visit(StateVertex.java:80)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.InvokeTrigger$ComputeVisitor.lambda$1(InvokeTrigger.java:256)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.base/java.util.HashMap$KeySpliterator.forEachRemaining(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.InvokeTrigger$ComputeVisitor.computeStateVertexState(InvokeTrigger.java:257)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.InvokeTrigger$ComputeVisitor.lambda$0(InvokeTrigger.java:252)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.InvokeTrigger$ComputeVisitor.cached(InvokeTrigger.java:325)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.InvokeTrigger$ComputeVisitor.accept(InvokeTrigger.java:252)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.InvokeTrigger$ComputeVisitor.accept(InvokeTrigger.java:1)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.StateVertex.visit(StateVertex.java:80)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.InvokeTrigger$ComputeVisitor.accept(InvokeTrigger.java:307)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.InvokeTrigger$ComputeVisitor.accept(InvokeTrigger.java:1)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.UpdateVertex.visit(UpdateVertex.java:57)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.InvokeTrigger.lambda$0(InvokeTrigger.java:112)
+	at java.base/java.util.stream.Collectors.lambda$uniqKeysMapAccumulator$1(Unknown Source)
+	at java.base/java.util.stream.ReduceOps$3ReducingSink.accept(Unknown Source)
+	at java.base/java.util.Iterator.forEachRemaining(Unknown Source)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.InvokeTrigger.invokeTrigger(InvokeTrigger.java:110)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.TriggerInvocationHandler.invokeTrigger(TriggerInvocationHandler.java:154)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.TriggerInvocationHandler.invokeTrigger(TriggerInvocationHandler.java:137)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.UpdatesUtil.getUpdateResults(UpdatesUtil.java:275)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.UpdatesUtil.postProcessLoadedJsonData(UpdatesUtil.java:220)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.UpdatesUtil.addUpdates(UpdatesUtil.java:176)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.UpdatesUtil.addUpdates(UpdatesUtil.java:131)
+	at org.knime.core.webui.node.dialog.defaultdialog.DefaultNodeSettingsService.lambda$1(DefaultNodeSettingsService.java:157)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.DefaultNodeDialogDataServiceUtil$InitialDataBuilder.buildJson(DefaultNodeDialogDataServiceUtil.java:156)
+	at org.knime.core.webui.node.dialog.defaultdialog.DefaultNodeSettingsService.fromNodeSettings(DefaultNodeSettingsService.java:159)
+	at org.knime.core.webui.node.dialog.NodeContainerNodeDialogAdapter$NodeDialogDataServiceAdapter.getInitialData(NodeContainerNodeDialogAdapter.java:149)
+	at org.knime.core.webui.data.InitialDataService.getInitialData(InitialDataService.java:116)
+	at org.knime.core.webui.node.DataServiceManager.callInitialDataService(DataServiceManager.java:130)
+	at org.knime.gateway.api.entity.UIExtensionEnt.<init>(UIExtensionEnt.java:124)
+	at org.knime.gateway.api.entity.UIExtensionEnt.<init>(UIExtensionEnt.java:92)
+	at org.knime.gateway.api.entity.NodeDialogEnt.<init>(NodeDialogEnt.java:79)
+	at org.knime.gateway.impl.webui.service.DefaultNodeService.lambda$0(DefaultNodeService.java:229)
+	at org.knime.core.webui.data.DataServiceDependencies.runWithDependencies(DataServiceDependencies.java:159)
+	at org.knime.gateway.impl.webui.service.DefaultNodeService.getNodeDialog(DefaultNodeService.java:228)
+	at org.knime.gateway.impl.webui.service.DefaultNodeService.getNodeDialog(DefaultNodeService.java:1)
+	at org.knime.gateway.impl.webui.jsonrpc.service.JsonRpcNodeServiceWrapper.getNodeDialog(JsonRpcNodeServiceWrapper.java:162)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at com.googlecode.jsonrpc4j.JsonRpcBasicServer.invoke(JsonRpcBasicServer.java:478)
+	at com.googlecode.jsonrpc4j.JsonRpcBasicServer.handleObject(JsonRpcBasicServer.java:349)
+	at com.googlecode.jsonrpc4j.JsonRpcBasicServer.handleJsonNodeRequest(JsonRpcBasicServer.java:274)
+	at com.googlecode.jsonrpc4j.JsonRpcBasicServer.handleRequest(JsonRpcBasicServer.java:242)
+	at org.knime.gateway.impl.jsonrpc.JsonRpcRequestHandler.handle(JsonRpcRequestHandler.java:112)
+	at org.knime.ui.java.browser.lifecycle.Init.lambda$16(Init.java:347)
+	at com.equo.comm.common.MessageHandler.processReceivedEventMessage(MessageHandler.java:131)
+	at com.equo.comm.ee.provider.service.ChromiumService.receiveMessage(ChromiumService.java:98)
+	at com.equo.comm.ee.provider.CommunicationManagerChromiumImpl.receiveMessage(CommunicationManagerChromiumImpl.java:48)
+	at com.equo.chromium.swt.internal.spi.CommRouterHandler.handleRequest(CommRouterHandler.java:33)
+	at com.equo.chromium.swt.internal.spi.CommRouterHandler.lambda$1(CommRouterHandler.java:51)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-11-14 14:25:25,517 : WARN  : KNIME-Worker-14 :  : ExcelFileContentInfoStateProvider : Excel Reader : 3:59 : Could not read sheet names for suggestions.
+org.knime.core.node.InvalidSettingsException: Please specify a file
+	at org.knime.core.node.util.CheckUtils.checkSetting(CheckUtils.java:274)
+	at org.knime.core.node.util.CheckUtils.checkSetting(CheckUtils.java:224)
+	at org.knime.filehandling.core.defaultnodesettings.filechooser.AbstractFileChooserPathAccessor.getRootPath(AbstractFileChooserPathAccessor.java:319)
+	at org.knime.filehandling.core.defaultnodesettings.filechooser.AbstractFileChooserPathAccessor.getFSPaths(AbstractFileChooserPathAccessor.java:230)
+	at org.knime.filehandling.core.defaultnodesettings.filechooser.reader.ReadPathAccessor.getPaths(ReadPathAccessor.java:96)
+	at org.knime.ext.poi3.node.io.filehandling.excel.ExcelFileContentInfoStateProvider.computeState(ExcelFileContentInfoStateProvider.java:130)
+	at org.knime.ext.poi3.node.io.filehandling.excel.ExcelFileContentInfoStateProvider.computeState(ExcelFileContentInfoStateProvider.java:1)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.InvokeTrigger$ComputeVisitor.computeIndexedValue(InvokeTrigger.java:280)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.InvokeTrigger$ComputeVisitor.lambda$12(InvokeTrigger.java:267)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.base/java.util.AbstractList$RandomAccessSpliterator.forEachRemaining(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.toArray(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.toArray(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.toList(Unknown Source)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.InvokeTrigger$ComputeVisitor.computeStateVertexState(InvokeTrigger.java:268)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.InvokeTrigger$ComputeVisitor.lambda$0(InvokeTrigger.java:252)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.InvokeTrigger$ComputeVisitor.cached(InvokeTrigger.java:325)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.InvokeTrigger$ComputeVisitor.accept(InvokeTrigger.java:252)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.InvokeTrigger$ComputeVisitor.accept(InvokeTrigger.java:1)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.StateVertex.visit(StateVertex.java:80)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.InvokeTrigger$ComputeVisitor.lambda$1(InvokeTrigger.java:256)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.base/java.util.HashMap$KeySpliterator.forEachRemaining(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.InvokeTrigger$ComputeVisitor.computeStateVertexState(InvokeTrigger.java:257)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.InvokeTrigger$ComputeVisitor.lambda$0(InvokeTrigger.java:252)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.InvokeTrigger$ComputeVisitor.cached(InvokeTrigger.java:325)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.InvokeTrigger$ComputeVisitor.accept(InvokeTrigger.java:252)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.InvokeTrigger$ComputeVisitor.accept(InvokeTrigger.java:1)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.StateVertex.visit(StateVertex.java:80)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.InvokeTrigger$ComputeVisitor.accept(InvokeTrigger.java:307)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.InvokeTrigger$ComputeVisitor.accept(InvokeTrigger.java:1)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.UpdateVertex.visit(UpdateVertex.java:57)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.InvokeTrigger.lambda$0(InvokeTrigger.java:112)
+	at java.base/java.util.stream.Collectors.lambda$uniqKeysMapAccumulator$1(Unknown Source)
+	at java.base/java.util.stream.ReduceOps$3ReducingSink.accept(Unknown Source)
+	at java.base/java.util.Iterator.forEachRemaining(Unknown Source)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.InvokeTrigger.invokeTrigger(InvokeTrigger.java:110)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.TriggerInvocationHandler.invokeTrigger(TriggerInvocationHandler.java:154)
+	at org.knime.core.webui.node.dialog.defaultdialog.util.updates.TriggerInvocationHandler.invokeTrigger(TriggerInvocationHandler.java:137)
+	at org.knime.core.webui.node.dialog.defaultdialog.dataservice.DataServiceTriggerInvocationHandler.trigger(DataServiceTriggerInvocationHandler.java:112)
+	at org.knime.core.webui.node.dialog.defaultdialog.dataservice.ParametersDataServiceImpl.lambda$4(ParametersDataServiceImpl.java:190)
+	at org.knime.core.util.ThreadUtils$CallableWithContextImpl.callWithContext(ThreadUtils.java:385)
+	at org.knime.core.util.ThreadUtils$CallableWithContext.call(ThreadUtils.java:271)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:143)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:277)
+2026-11-14 14:27:52,390 : INFO  : KNIME-Worker-16-Excel Reader 3:59 :  : LocalNodeExecutionJob : Excel Reader : 3:59 : Excel Reader 3:59 End execute (0 secs)
+2026-11-14 14:29:36,250 : INFO  : KNIME-Worker-19-Row Filter 3:60 :  : LocalNodeExecutionJob : Row Filter : 3:60 : Row Filter 3:60 End execute (0 secs)
+2026-11-14 14:30:01,337 : INFO  : main :  : LifeCycle :  :  : State transition 'SAVE_STATE' aborted
+2026-11-14 14:32:38,441 : INFO  : KNIME-Worker-21-Row Filter 3:61 :  : LocalNodeExecutionJob : Row Filter : 3:61 : Row Filter 3:61 End execute (0 secs)
+2026-11-14 14:34:26,150 : INFO  : KNIME-Worker-22-Column Filter 3:62 :  : LocalNodeExecutionJob : Column Filter : 3:62 : Column Filter 3:62 End execute (0 secs)
+2026-11-14 14:37:18,124 : INFO  : KNIME-Worker-25-Column Renamer 3:63 :  : LocalNodeExecutionJob : Column Renamer : 3:63 : Column Renamer 3:63 End execute (0 secs)
+2026-11-14 14:40:13,934 : INFO  : KNIME-Worker-27-Rule-based Row Filter 3:64 :  : LocalNodeExecutionJob : Rule-based Row Filter : 3:64 : Rule-based Row Filter 3:64 End execute (0 secs)
+2026-11-14 14:42:36,431 : INFO  : KNIME-Worker-28-String to Number 3:65 :  : LocalNodeExecutionJob : String to Number : 3:65 : String to Number 3:65 End execute (0 secs)
+2026-11-14 14:43:24,631 : WARN  : comm-pool-thread-35 :  : Node : GroupBy : 3:66 : No grouping column included. Aggregate complete table.
+2026-11-14 14:43:24,631 : WARN  : comm-pool-thread-35 :  : Node : GroupBy : 3:66 : No aggregation column defined
+2026-11-14 14:43:24,631 : WARN  : comm-pool-thread-35 :  : Node : GroupBy : 3:66 : Please select at least one group or aggregation column
+2026-11-14 14:46:25,547 : INFO  : KNIME-Worker-29-GroupBy 3:66 :  : LocalNodeExecutionJob : GroupBy : 3:66 : GroupBy 3:66 End execute (0 secs)
+2026-11-14 14:49:27,732 : INFO  : KNIME-Worker-32-Sorter 3:67 :  : LocalNodeExecutionJob : Sorter : 3:67 : Sorter 3:67 End execute (0 secs)
+2026-11-14 14:50:34,751 : INFO  : KNIME-Worker-33-Bar Chart 3:68 :  : LocalNodeExecutionJob : Bar Chart : 3:68 : Bar Chart 3:68 End execute (0 secs)
+2026-11-14 14:50:34,847 : WARN  : Thread-183049 :  : KnimeBrowserView :  :  : An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. (source: https://org.knime.core.ui.view/uiext-view/org.knime.base.views.node.barchart.BarChartNodeFactory/BarChart.html; line: 0)
+2026-11-14 14:50:36,586 : WARN  : Thread-183974 :  : CEFNodeView :  :  : An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. (source: https://org.knime.core.ui.view/uiext-view/org.knime.base.views.node.barchart.BarChartNodeFactory/BarChart.html; line: 0)
+2026-11-14 14:52:00,152 : INFO  : KNIME-Worker-34-Bar Chart 3:69 :  : LocalNodeExecutionJob : Bar Chart : 3:69 : Bar Chart 3:69 End execute (0 secs)
+2026-11-14 14:52:00,233 : WARN  : Thread-191800 :  : KnimeBrowserView :  :  : An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. (source: https://org.knime.core.ui.view/uiext-view/org.knime.base.views.node.barchart.BarChartNodeFactory/BarChart.html; line: 0)
+2026-11-14 14:52:01,692 : WARN  : Thread-192853 :  : CEFNodeView :  :  : An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. (source: https://org.knime.core.ui.view/uiext-view/org.knime.base.views.node.barchart.BarChartNodeFactory/BarChart.html; line: 0)
+2026-11-14 14:58:08,872 : WARN  : Thread-195298 :  : KnimeBrowserView :  :  : An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. (source: https://org.knime.core.ui.view/uiext-view/org.knime.base.views.node.barchart.BarChartNodeFactory/BarChart.html; line: 0)
+2026-11-14 14:58:18,449 : WARN  : comm-pool-thread-37 :  : Node : Math Formula : 3:70 : No configuration available
+2026-11-14 14:58:56,603 : INFO  : KNIME-Worker-35-Math Formula 3:70 :  : LocalNodeExecutionJob : Math Formula : 3:70 : Math Formula 3:70 End execute (0 secs)
+2026-11-14 15:02:25,006 : INFO  : KNIME-Worker-36-Bar Chart 3:71 :  : LocalNodeExecutionJob : Bar Chart : 3:71 : Bar Chart 3:71 End execute (0 secs)
+2026-11-14 15:02:25,082 : WARN  : Thread-206626 :  : KnimeBrowserView :  :  : An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. (source: https://org.knime.core.ui.view/uiext-view/org.knime.base.views.node.barchart.BarChartNodeFactory/BarChart.html; line: 0)
+2026-11-14 15:02:26,833 : WARN  : Thread-207736 :  : CEFNodeView :  :  : An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. (source: https://org.knime.core.ui.view/uiext-view/org.knime.base.views.node.barchart.BarChartNodeFactory/BarChart.html; line: 0)
+2026-11-14 15:04:03,861 : WARN  : Thread-213017 :  : CEFNodeView :  :  : An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. (source: https://org.knime.core.ui.view/uiext-view/org.knime.base.views.node.barchart.BarChartNodeFactory/BarChart.html; line: 0)
+2026-11-14 15:04:31,919 : WARN  : comm-pool-thread-40 :  : Node : CSV Writer : 3:72 : Please specify a file
+2026-11-14 15:04:52,871 : WARN  : comm-pool-thread-42 :  : Node : CSV Writer : 3:72 : Please specify a file
+2026-11-14 15:05:28,632 : WARN  : comm-pool-thread-42 :  : Node : CSV Writer : 3:72 : Please specify a file
+2026-11-14 15:06:08,148 : INFO  : KNIME-Worker-37-CSV Writer 3:72 :  : LocalNodeExecutionJob : CSV Writer : 3:72 : CSV Writer 3:72 End execute (0 secs)
+2026-11-14 15:08:58,844 : INFO  : KNIME shutdown hooks - org.knime.core.util.FileUtil$$Lambda/0x0000027343522440 :  : FileUtil :  :  : Deleting 5 temporary files.
