@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive Australian hospitalised road traffic injury data story, 2011–2021.">
+  <title>Australian Road Injury Story</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/charts.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#overview" aria-label="RoadSafe home">
+      <span class="brand-mark">RS</span>
+      <span><strong>ROADSAFE</strong><small>AUSTRALIAN INJURY DATA · 2011–2021</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="active" href="#national-trends">National Trends</a>
+      <a href="#road-users">Road Users</a>
+      <a href="#jurisdictions">Jurisdictions</a>
+      <a href="#demographics">Remoteness</a>
+      <a href="#q5-first-nations">First Nations</a>
+      <a href="#data-integrity">Data Integrity</a>
+    </nav>
+    
+  </header>
+
+  <main id="overview" class="page-shell">
+    <section class="intro-row">
+      <div>
+        <p class="eyebrow">ROAD TRAFFIC INJURY DATA STORY</p>
+        <h1>Understanding Australia's<br><span>hospitalised road injuries.</span></h1>
+        <p class="intro-copy">Explore national patterns and the reporting context behind hospitalised road traffic injuries from 2011 to 2021.</p>
+      </div>
+      <div class="intro-note"><span class="note-dot"></span><span>Evidence-led overview<br><strong>2011–2021</strong></span></div>
+    </section>
+
+    <section class="global-controls" aria-label="Dashboard controls">
+      <div class="control-block">
+        <label for="year-start">YEAR RANGE</label>
+        <div class="range-control">
+          <select id="year-start" aria-label="Start year"></select><span>to</span>
+          <select id="year-end" aria-label="End year"></select>
+        </div>
+      </div>
+      <div class="control-block">
+        <label for="jurisdiction">JURISDICTION</label>
+        <select id="jurisdiction" disabled aria-label="Jurisdiction"><option>Australia (national dataset)</option></select>
+      </div>
+      <button id="reset-filters" class="reset-button" type="button">↺ Reset filters</button>
+      <p class="control-hint">Year range applies to compatible annual datasets (Q1 and Q3). Q2 compares fixed endpoints (2011 and 2021); Q4 and Q5 use 2021 data.</p>
+    </section>
+
+    <section class="metric-grid" aria-label="National summary metrics">
+      <article class="metric-card">
+        <span class="metric-label" id="metric-latest-label">HOSPITALISATIONS</span>
+        <strong class="metric-value" id="metric-latest">—</strong>
+        <span class="metric-foot" id="metric-latest-foot">Latest year in selected period</span>
+      </article>
+      <article class="metric-card">
+        <span class="metric-label">PEAK YEAR</span>
+        <strong class="metric-value" id="metric-peak-year">—</strong>
+        <span class="metric-foot" id="metric-peak-value">Highest annual count</span>
+      </article>
+      <article class="metric-card">
+        <span class="metric-label">CHANGE · SELECTED PERIOD</span>
+        <strong class="metric-value" id="metric-change">—</strong>
+        <span class="metric-foot" id="metric-change-foot">First to last selected year</span>
+      </article>
+      <article class="metric-card metric-card-accent">
+        <span class="metric-label">YEARS COVERED</span>
+        <strong class="metric-value" id="metric-years">11</strong>
+        <span class="metric-foot" id="metric-years-foot">2011–2021</span>
+      </article>
+    </section>
+
+    <section id="national-trends" class="content-section">
+      <div class="section-heading">
+        <div><p class="eyebrow">QUESTION 01 · NATIONAL OVERVIEW</p><h2>National hospitalisation trends</h2><p>How did reported hospitalisations change between 2011 and 2021?</p></div>
+        <span class="section-index">01 / 05</span>
+      </div>
+      <article class="chart-card">
+        <div class="chart-card-heading">
+          <div><h3>Annual hospitalised road traffic injuries</h3><p>Number of hospitalisations · Australia</p></div>
+          <div class="chart-legend"><span class="legend-line"></span><span>Hospitalisations</span><span class="legend-band"></span><span>Reporting policy change</span></div>
+        </div>
+        <div class="chart-wrap">
+          <div id="q1-chart" role="img" aria-label="Line chart showing annual hospitalised road traffic injuries in Australia from 2011 to 2021."></div>
+          <div id="chart-tooltip" class="chart-tooltip" role="status" aria-live="polite"></div>
+        </div>
+        <div class="chart-footnote"><span><i class="footnote-mark"></i> Shaded years indicate documented admission-policy changes in Victoria (2012) and NSW (2017).</span><span>Source: BITRE, September 2023 release</span></div>
+      </article>
+      <div class="insight-grid">
+        <article class="insight-card"><span class="insight-kicker">KEY OBSERVATION</span><h3 id="insight-title">National trend</h3><p id="insight-copy">The chart highlights the overall trajectory and reporting context.</p></article>
+        <article class="context-card"><span class="context-icon">i</span><div><h3>Read the reporting context</h3><p>Changes in recorded hospitalisations may reflect admission and coding practices as well as changes in injury occurrence. The 2012 and 2017 annotations identify documented policy changes, not causal estimates.</p></div></article>
+      </div>
+    </section>
+
+    <section id="road-users" class="content-section">
+      <div class="section-heading">
+        <div><p class="eyebrow">QUESTION 02 · ROAD USER BREAKDOWN</p><h2>Road user contributions</h2><p>Which road-user categories experienced the largest changes in recorded hospitalisations between 2011 and 2021?</p></div>
+        <span class="section-index">02 / 05</span>
+      </div>
+      <div class="q2-chart-grid">
+        <article class="chart-card">
+          <div class="chart-card-heading"><div><h3>Absolute change in hospitalisations</h3><p>Difference in recorded cases · 2011–2021</p></div></div>
+          <div id="q2-absolute-chart" class="q2-chart" role="img" aria-label="Diverging bar chart of absolute hospitalisation changes by road-user category, 2011 to 2021."></div>
+          <div class="chart-footnote"><span>Blue = increase · Orange = decrease</span><span>Change = 2021 count minus 2011 count</span></div>
+        </article>
+        <article class="chart-card">
+          <div class="chart-card-heading"><div><h3>Percentage change by road user</h3><p>Relative change in recorded cases · 2011–2021</p></div></div>
+          <div id="q2-percentage-chart" class="q2-chart" role="img" aria-label="Diverging bar chart of percentage hospitalisation changes by road-user category, 2011 to 2021."></div>
+          <div class="chart-footnote"><span>Blue = increase · Orange = decrease</span><span>Percentage change relative to 2011</span></div>
+        </article>
+      </div>
+      <div class="insight-grid">
+        <article class="insight-card"><span class="insight-kicker">KEY OBSERVATION</span><h3 id="q2-insight-title">Road-user comparison</h3><p id="q2-insight-copy">Comparisons show changes in recorded hospitalisations, not individual road-user risk.</p></article>
+        <article class="context-card"><span class="context-icon">i</span><div><h3>Interpret with care</h3><p>Counts do not account for exposure, such as travel distance or time spent on the road. The supplied files contain endpoint comparisons for 2011 and 2021, not annual values for every intervening year. Therefore, these charts do not show percentage-share shifts over time.</p></div></article>
+      </div>
+    </section>
+
+    <section id="jurisdictions" class="content-section">
+      <div class="section-heading">
+        <div><p class="eyebrow">QUESTION 03 · STATE & TERRITORY COMPARISON</p><h2>Jurisdictional differences</h2><p>How did recorded hospitalisations vary across Australian jurisdictions between 2018 and 2021?</p></div>
+        <span class="section-index">03 / 05</span>
+      </div>
+      <div class="q3-period-note"><span class="note-dot"></span><span>Q3 dataset covers <strong>2018–2021</strong>. The global year selection is applied where it overlaps with these available years.</span></div>
+      <div class="chart-card q3-card">
+        <div class="chart-card-heading"><div><h3>Annual hospitalisations by state and territory</h3><p>Grouped comparison · recorded hospitalisations</p></div></div>
+        <div id="q3-grouped-chart" class="q3-chart" role="img" aria-label="Grouped bar chart comparing annual hospitalisations across Australian states and territories from 2018 to 2021."></div>
+        <div class="chart-footnote"><span>Each colour represents a year. Hover or focus a bar for the exact count.</span><span>Vertical axis begins at zero.</span></div>
+      </div>
+      <div class="chart-card q3-card q3-change-card">
+        <div class="chart-card-heading"><div><h3>Change between selected endpoints</h3><p>Difference in recorded hospitalisations by jurisdiction</p></div></div>
+        <div id="q3-change-chart" class="q3-chart" role="img" aria-label="Diverging horizontal bar chart showing changes in hospitalisations by jurisdiction between selected years."></div>
+      </div>
+      <div class="insight-grid">
+        <article class="insight-card"><span class="insight-kicker">KEY OBSERVATION</span><h3 id="q3-insight-title">Jurisdictional comparison</h3><p id="q3-insight-copy">Compare the selected endpoints to identify the largest changes.</p></article>
+        <article class="context-card"><span class="context-icon">i</span><div><h3>Comparability matters</h3><p>These visualisations compare recorded hospitalisation counts, not population-adjusted rates. Jurisdictions differ in population size, and the report notes that Victoria and NSW experienced changes in emergency department admission and coding practices. Avoid interpreting count differences as direct differences in individual risk.</p></div></article>
+      </div>
+    </section>
+    <section id="demographics" class="content-section">
+      <div class="section-heading">
+        <div><p class="eyebrow">QUESTION 04 · REMOTENESS</p><h2>Hospitalisation burden by remoteness</h2><p>How did hospitalisations and hospital bed use vary across remoteness areas in 2021?</p></div>
+        <span class="section-index">04 / 05</span>
+      </div>
+      <div class="q3-period-note"><span class="note-dot"></span><span>Q4 uses a fixed <strong>2021 snapshot</strong>. The global year filter does not change these results.</span></div>
+      <div class="chart-card q3-card">
+        <div class="chart-card-heading"><div><h3>Hospitalisations by remoteness area</h3><p>Number of recorded hospitalisations · 2021</p></div></div>
+        <div id="q4-burden-chart" class="q3-chart" role="img" aria-label="Horizontal bar chart showing 2021 hospitalisations by remoteness area."></div>
+        <div class="chart-footnote"><span>Major Cities account for the largest number of hospitalisations in the supplied dataset.</span><span>Counts, not population-adjusted rates.</span></div>
+      </div>
+      <div class="chart-card q3-card">
+        <div class="chart-card-heading"><div><h3>Total hospital bed days by remoteness area</h3><p>Total inpatient bed days · 2021</p></div></div>
+        <div id="q4-bed-days-chart" class="q3-chart" role="img" aria-label="Horizontal bar chart showing total hospital bed days by remoteness area in 2021."></div>
+      </div>
+      <div class="chart-card q3-card">
+        <div class="chart-card-heading"><div><h3>Average bed days per hospitalisation</h3><p>Bed days divided by hospitalisations · 2021</p></div></div>
+        <div id="q4-stay-chart" class="q3-chart" role="img" aria-label="Horizontal bar chart showing average bed days per hospitalisation by remoteness area."></div>
+        <div class="chart-footnote"><span>Higher values indicate a greater average number of bed days per hospitalisation.</span><span>Rounded to two decimal places.</span></div>
+      </div>
+      <div class="insight-grid">
+        <article class="insight-card"><span class="insight-kicker">KEY OBSERVATION</span><h3 id="q4-insight-title">Remoteness comparison</h3><p id="q4-insight-copy">Comparing bed days per hospitalisation across remoteness areas.</p></article>
+        <article class="context-card"><span class="context-icon">i</span><div><h3>Reading the measures</h3><p>Hospitalisation counts describe the volume of admitted episodes, while bed days per hospitalisation describe average inpatient bed use. These figures are not population-adjusted rates and should not be interpreted as individual road injury risk. The “Other or unknown” category is retained as supplied.</p></div></article>
+      </div>
+    </section>
+    <section id="q5-first-nations" class="content-section">
+      <div class="section-heading">
+        <div><p class="eyebrow">QUESTION 05 · FIRST NATIONS OUTCOMES</p><h2>First Nations road-user outcomes</h2><p>How did hospitalisations and inpatient bed use vary across road-user categories in the supplied 2021 First Nations dataset?</p></div>
+        <span class="section-index">05 / 05</span>
+      </div>
+      <div class="q3-period-note"><span class="note-dot"></span><span>Q5 uses a fixed <strong>2021 snapshot</strong>. The global year filter does not change these results.</span></div>
+      <div class="chart-card q3-card">
+        <div class="chart-card-heading"><div><h3>Hospitalisations by road-user category</h3><p>Number of recorded hospitalisations · 2021</p></div></div>
+        <div id="q5-hospitalisations-chart" class="q3-chart" role="img" aria-label="Horizontal bar chart of First Nations hospitalisations by road-user category in 2021."></div>
+      </div>
+      <div class="chart-card q3-card">
+        <div class="chart-card-heading"><div><h3>Total hospital bed days by road-user category</h3><p>Total inpatient bed days · 2021</p></div></div>
+        <div id="q5-bed-days-chart" class="q3-chart" role="img" aria-label="Horizontal bar chart of First Nations total bed days by road-user category in 2021."></div>
+      </div>
+      <div class="chart-card q3-card">
+        <div class="chart-card-heading"><div><h3>Average bed days per hospitalisation</h3><p>Bed days divided by hospitalisations · 2021</p></div></div>
+        <div id="q5-average-chart" class="q3-chart" role="img" aria-label="Horizontal bar chart of average bed days per hospitalisation by road-user category in 2021."></div>
+      </div>
+      <div class="insight-grid">
+        <article class="insight-card"><span class="insight-kicker">KEY OBSERVATION</span><h3 id="q5-insight-title">Road-user outcome comparison</h3><p id="q5-insight-copy">Comparing hospitalisations and bed use across road-user categories.</p></article>
+        <article class="context-card"><span class="context-icon">i</span><div><h3>Important data limitation</h3><p>This dataset contains four road-user categories and 2021 counts for hospitalisations and bed days. It does not provide population denominators, annual trends, remoteness breakdowns or a non-Indigenous comparison group. These counts therefore should not be interpreted as population-adjusted risk or evidence of differences between First Nations and non-Indigenous people.</p></div></article>
+      </div>
+    </section>
+
+    <section id="data-integrity" class="integrity-section">
+      <p class="eyebrow">METHODOLOGY & TRANSPARENCY</p><h2>Data integrity & provenance</h2>
+      <div class="integrity-grid">
+        <div><h3>Data source</h3><p>BITRE hospitalised injury statistical workbooks, September 2023 release, based on the AIHW National Hospital Morbidity Database.</p></div>
+        <div><h3>Reporting unit</h3><p>A hospital separation represents an admitted patient episode ending in discharge, transfer or death.</p></div>
+        <div><h3>Interpretation</h3><p>Victoria (2012) and NSW (2017) introduced emergency department admission policy changes. These structural breaks should be considered when interpreting trends.</p></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><span>ROADSAFE · COS30045 DATA VISUALISATION</span><span>Australian hospitalised road traffic injuries · 2011–2021</span></footer>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
