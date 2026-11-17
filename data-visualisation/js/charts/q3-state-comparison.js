@@ -89,6 +89,11 @@ function positionQ3Tip(event){
 }
 function hideQ3Tip(){d3.select(".q3-tooltip").style("display","none");}
 function updateQ3Insight(rows,startYear,endYear){
+  if(startYear===endYear){
+    document.querySelector("#q3-insight-title").textContent="Select at least two years.";
+    document.querySelector("#q3-insight-copy").textContent="Choose a wider year range within 2018–2021 to compare jurisdictions.";
+    return;
+  }
   const changes=["NSW","Vic","Qld","WA","SA","Tas","ACT","NT"].map(state=>{
     const a=rows.find(d=>d.state===state&&d.year===startYear),b=rows.find(d=>d.state===state&&d.year===endYear);
     return a&&b?{state,change:b.hospitalisations-a.hospitalisations}:null;
@@ -115,7 +120,7 @@ let q3BoundaryPromise;
 let latestQ3MapRows=[];
 let latestQ3MapYear=2021;
 document.addEventListener("colourmodechange",()=>{
-  if(latestQ3MapRows.length) renderQ3Map(latestQ3MapRows,latestQ3MapYear);
+  if(latestQ3MapRows.length&&!document.querySelector("#q3-map-year").disabled) renderQ3Map(latestQ3MapRows,latestQ3MapYear);
 });
 function loadQ3Boundaries(){
   if(!q3BoundaryPromise){
@@ -148,6 +153,7 @@ async function renderQ3Map(rows,year){
   }
   try{
     const geo=await loadQ3Boundaries();
+    if(yearSelect?.disabled)return;
     const features=geo.features.filter(f=>STATE_NAME_TO_ABBR[f.properties.name]);
     if(features.length!==8) throw new Error(`Expected 8 state and territory boundaries, received ${features.length}`);
     const width=Math.max(320,host.node().getBoundingClientRect().width);
@@ -239,6 +245,7 @@ async function renderQ3Map(rows,year){
     legend.append("text").attr("class","q3-map-legend").attr("x",legendWidth).attr("y",-5)
       .attr("text-anchor","end").text("More");
   }catch(error){
+    if(yearSelect?.disabled)return;
     console.error("Q3 ABS boundary map failed:",error);
     host.html('<p class="map-error">The local ABS boundary file could not be loaded. Check that data/australia-states.geojson is present and run the site through Live Server.</p>');
   }
