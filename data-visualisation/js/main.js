@@ -45,6 +45,8 @@ async function init() {
     renderQ3(q3Data.length?{start:2011,end:2021}:{start:2018,end:2021});
     subscribeToYearRange(renderQ3);
     setupNavigation();
+    setupColourMode();
+    setupRevealAnimations();
 
     let resizeTimer;
     window.addEventListener("resize",()=>{
@@ -76,3 +78,36 @@ function updateInsight(data){
   copy.textContent=`Recorded hospitalisations changed from ${first.hospitalisations.toLocaleString("en-AU")} in ${first.year} to ${last.hospitalisations.toLocaleString("en-AU")} in ${last.year}. Interpret this alongside the 2012 Victoria and 2017 NSW admission-policy annotations.`;
 }
 init();
+
+function setupColourMode(){
+  const button=document.querySelector("#colour-mode-toggle");
+  if(!button)return;
+  button.addEventListener("click",()=>{
+    const enabled=document.body.classList.toggle("colourblind-mode");
+    button.setAttribute("aria-pressed",String(enabled));
+    button.textContent=`Colour-blind mode: ${enabled?"On":"Off"}`;
+    document.dispatchEvent(new Event("colourmodechange"));
+  });
+}
+function setupRevealAnimations(){
+  const elements=document.querySelectorAll(
+    ".content-section,.metric-card,.chart-card,.insight-card,.context-card,.integrity-section"
+  );
+  if(!("IntersectionObserver" in window)){
+    elements.forEach(element=>element.classList.add("is-visible"));
+    return;
+  }
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      // Toggle visibility in both directions so the reveal repeats while scrolling.
+      entry.target.classList.toggle("is-visible",entry.isIntersecting);
+    });
+  },{threshold:.12,rootMargin:"0px 0px -45px 0px"});
+  elements.forEach((element,index)=>{
+    element.classList.add("reveal-on-scroll");
+    if(element.classList.contains("chart-card")){
+      element.classList.add(`reveal-delay-${(index%3)+1}`);
+    }
+    observer.observe(element);
+  });
+}

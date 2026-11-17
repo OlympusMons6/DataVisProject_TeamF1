@@ -76,3 +76,36 @@ Q5 uses the supplied fixed 2021 dataset. It compares hospitalisation counts, tot
 ## Final navigation
 
 The sticky navigation links directly to all five question sections, including separate Remoteness (Q4) and First Nations (Q5) destinations. The active navigation item updates as the reader scrolls.
+
+
+## Visual polish additions
+
+- Q3 includes an interactive choropleth map for the selected map year, alongside the grouped bar chart. The map uses simplified 2021 Australian state and territory boundaries derived from ABS ASGS Edition 3 data, hosted as GeoJSON by GeoDataViewer. An internet connection is required to load this boundary file.
+- The map displays recorded hospitalisation counts, not population-adjusted rates. The map year can be changed independently from the global year filter.
+- The header includes a colour-blind mode toggle with a blue/orange alternative palette. Labels and tooltips remain available so meaning is not conveyed by colour alone.
+- Chart cards and visualisations use subtle entrance animations and hover highlighting. Reduced-motion preferences are respected.
+
+Boundary data attribution: Australian Bureau of Statistics (ABS), ASGS Edition 3, 2021 state and territory boundaries, simplified and distributed as GeoJSON by GeoDataViewer under CC BY 4.0. Source: https://geodataviewer.com/datasets/boundaries/australia-states-boundaries/
+
+
+## Q3 interactive state tile map
+
+The Q3 geographic panel is implemented as a local schematic tile map of the eight states and territories represented in the supplied Q3 dataset. Each tile is shaded by the selected year's recorded hospitalisation count and supports pointer hover and keyboard focus. Tile positions are schematic rather than official geographic boundaries. The map uses the supplied Q3 CSV only and makes no external GeoJSON request, avoiding browser CORS restrictions. Counts are not population-adjusted rates.
+
+## Interaction and motion
+
+- Chart marks respond to hover and keyboard focus.
+- Dashboard sections and chart cards reveal with a subtle fade-and-rise effect as they enter the viewport.
+- Reveal animations play once per element.
+- Reduced-motion preferences are respected.
+- The colour-blind palette toggle updates CSS colour variables used by the charts and Q3 tile map.
+
+
+## Official Q3 geographic boundaries
+
+The Q3 map uses the Australian Bureau of Statistics (ABS) ASGS Edition 3 (2021) State and Territory boundaries, GDA2020. The eight state/territory features represented in the Q3 dataset are bundled locally at `data/australia-states.geojson`; Other Territories and Outside Australia are excluded because the Q3 dataset has no matching observations for them. The map loads this local GeoJSON file and does not call an external boundary server, avoiding the previous CORS failure. The map displays recorded hospitalisation counts, not population-adjusted rates.
+
+Source: Australian Bureau of Statistics, ASGS Edition 3 (2021), State and Territory boundaries, GDA2020.
+
+
+The local GeoJSON coordinates are projected into GDA2020 / Australian Albers (EPSG:3577). D3 renders these as planar coordinates with `geoIdentity`, preserving Australia's true relative state shapes and avoiding spherical ring-winding artefacts.

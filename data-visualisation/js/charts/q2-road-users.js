@@ -47,7 +47,7 @@ function renderDivergingBars(selector,rows,config){
     .attr("width",d=>Math.abs(x(config.value(d))-x(0)))
     .attr("height",y.bandwidth())
     .attr("rx",3)
-    .attr("fill",d=>config.value(d)>=0?"#3182BD":"#E6550D")
+    .attr("fill",d=>config.value(d)>=0?"var(--chart-blue)":"var(--chart-negative)")
     .attr("tabindex",0)
     .attr("aria-label",d=>`${d.roadUser}: ${config.format(config.value(d))}`)
     .on("pointerenter focus",(event,d)=>showTip(event,d,tooltip,config))

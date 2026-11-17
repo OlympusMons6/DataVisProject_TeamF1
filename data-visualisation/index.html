@@ -29,6 +29,7 @@
       <a href="#data-integrity">Data Integrity</a>
     </nav>
     
+    <button id="colour-mode-toggle" class="reset-button colour-mode-toggle" type="button" aria-pressed="false">Colour-blind mode: Off</button>
   </header>
 
   <main id="overview" class="page-shell">
@@ -54,7 +55,7 @@
         <select id="jurisdiction" disabled aria-label="Jurisdiction"><option>Australia (national dataset)</option></select>
       </div>
       <button id="reset-filters" class="reset-button" type="button">↺ Reset filters</button>
-      <p class="control-hint">Year range applies to compatible annual datasets (Q1 and Q3). Q2 compares fixed endpoints (2011 and 2021); Q4 and Q5 use 2021 data.</p>
+      <p class="control-hint">Use the colour-blind mode toggle in the header for an alternative accessible chart palette. Year range applies to compatible annual datasets (Q1 and Q3). Q2 compares fixed endpoints (2011 and 2021); Q4 and Q5 use 2021 data.</p>
     </section>
 
     <section class="metric-grid" aria-label="National summary metrics">
@@ -135,6 +136,13 @@
         <div class="chart-card-heading"><div><h3>Annual hospitalisations by state and territory</h3><p>Grouped comparison · recorded hospitalisations</p></div></div>
         <div id="q3-grouped-chart" class="q3-chart" role="img" aria-label="Grouped bar chart comparing annual hospitalisations across Australian states and territories from 2018 to 2021."></div>
         <div class="chart-footnote"><span>Each colour represents a year. Hover or focus a bar for the exact count.</span><span>Vertical axis begins at zero.</span></div>
+      </div>
+      <div class="chart-card q3-card q3-map-card">
+        <div class="chart-card-heading"><div><h3>Geographic distribution by state and territory</h3><p>ABS state and territory boundaries · recorded hospitalisations</p></div>
+          <label class="map-year-control" for="q3-map-year">MAP YEAR <select id="q3-map-year" aria-label="Map year"><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option></select></label>
+        </div>
+        <div id="q3-map-chart" class="q3-chart q3-map-chart" role="img" aria-label="Official ABS ASGS Edition 3 (2021) state and territory boundaries shaded by recorded hospitalisations."></div>
+        <div class="chart-footnote"><span>Hover or focus a state or territory for its recorded count. Boundary geometry: ABS ASGS Edition 3 (2021), Australian Albers projection (EPSG:3577).</span><span>Counts are not population-adjusted rates.</span></div>
       </div>
       <div class="chart-card q3-card q3-change-card">
         <div class="chart-card-heading"><div><h3>Change between selected endpoints</h3><p>Difference in recorded hospitalisations by jurisdiction</p></div></div>

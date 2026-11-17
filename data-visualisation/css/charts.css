@@ -1,1 +1,61 @@
- .axis text{fill:var(--muted);font:10px var(--font)}.axis path,.axis line{stroke:#52606D}.grid-line line{stroke:#39434E;stroke-dasharray:3 5}.grid-line path{display:none}.policy-band{fill:rgba(230,85,13,.12);stroke:rgba(230,85,13,.42);stroke-width:1}.policy-label{fill:#F29A70;font:9px var(--font);font-weight:600}.line-path{fill:none;stroke:var(--blue-light);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.area-path{fill:url(#q1-area-gradient)}.data-point{fill:var(--blue-light);stroke:var(--surface);stroke-width:2;cursor:crosshair}.data-point:focus{stroke:white;stroke-width:3;outline:none}
+ .axis text{fill:var(--muted);font:10px var(--font)}.axis path,.axis line{stroke:#52606D}.grid-line line{stroke:#39434E;stroke-dasharray:3 5}.grid-line path{display:none}.policy-band{fill:rgba(230,85,13,.12);stroke:rgba(230,85,13,.42);stroke-width:1}.policy-label{fill:#F29A70;font:9px var(--font);font-weight:600}.line-path{fill:none;stroke:var(--chart-blue-light);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.area-path{fill:url(#q1-area-gradient)}.data-point{fill:var(--chart-blue-light);stroke:var(--surface);stroke-width:2;cursor:crosshair}.data-point:focus{stroke:white;stroke-width:3;outline:none}
+
+
+/* Interactive chart feedback: subtle, fast and keyboard-accessible. */
+.chart-card svg rect,
+.chart-card svg path,
+.chart-card svg circle {
+  transition: filter 180ms ease, transform 180ms ease, opacity 180ms ease,
+              stroke-width 180ms ease;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.chart-card svg rect[tabindex]:hover,
+.chart-card svg rect[tabindex]:focus,
+.chart-card svg path[tabindex]:hover,
+.chart-card svg path[tabindex]:focus,
+.chart-card svg circle[tabindex]:hover,
+.chart-card svg circle[tabindex]:focus {
+  filter: brightness(1.22) drop-shadow(0 2px 5px rgba(0,0,0,.28));
+  transform: translateY(-2px) scale(1.025);
+  stroke: #F8FAFC;
+  stroke-width: 1.5px;
+  outline: none;
+  cursor: pointer;
+}
+.chart-card svg rect[tabindex]:focus-visible,
+.chart-card svg path[tabindex]:focus-visible,
+.chart-card svg circle[tabindex]:focus-visible {
+  stroke: #FFFFFF;
+  stroke-width: 2.5px;
+}
+.chart-card {
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+.chart-card:focus-within {
+  border-color: rgba(158,202,225,.55);
+}
+.chart-tooltip,
+.q2-tooltip {
+  opacity: 0;
+  transition: opacity 140ms ease;
+}
+.chart-tooltip[style*="display: block"],
+.q2-tooltip[style*="display: block"] {
+  opacity: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .chart-card svg rect,
+  .chart-card svg path,
+  .chart-card svg circle,
+  .chart-card,
+  .chart-tooltip,
+  .q2-tooltip {
+    transition: none !important;
+  }
+  .chart-card svg rect[tabindex]:hover,
+  .chart-card svg path[tabindex]:hover,
+  .chart-card svg circle[tabindex]:hover {
+    transform: none;
+  }
+}

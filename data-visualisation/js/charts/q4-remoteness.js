@@ -24,7 +24,7 @@ function renderBurden(rows){
   const plot=svg.append("g").attr("transform",`translate(${margin.left},${margin.top})`);
   plot.append("g").attr("class","q2-grid").call(d3.axisBottom(x).ticks(4).tickSize(ih).tickFormat(""));
   plot.append("g").attr("class","q2-axis").call(d3.axisLeft(y).tickSize(0));
-  plot.selectAll("rect").data(data).join("rect").attr("x",0).attr("y",d=>y(d.remoteness)).attr("width",d=>x(d.hospitalisations)).attr("height",y.bandwidth()).attr("rx",3).attr("fill","#3182BD")
+  plot.selectAll("rect").data(data).join("rect").attr("x",0).attr("y",d=>y(d.remoteness)).attr("width",d=>x(d.hospitalisations)).attr("height",y.bandwidth()).attr("rx",3).attr("fill","var(--chart-blue)")
     .on("pointerenter",(event,d)=>tip(event,d.remoteness,`${FORMAT.format(d.hospitalisations)} hospitalisations`)).on("pointermove",moveTip).on("pointerleave",hideTip);
   plot.selectAll("text.value").data(data).join("text").attr("class","q2-value-label").attr("x",d=>x(d.hospitalisations)+6).attr("y",d=>y(d.remoteness)+y.bandwidth()/2+3).text(d=>FORMAT.format(d.hospitalisations));
   svg.append("text").attr("class","q2-axis-title").attr("x",margin.left+iw/2).attr("y",height-5).attr("text-anchor","middle").text("Hospitalisations · 2021");
@@ -42,7 +42,7 @@ function renderBedDays(rows){
   const plot=svg.append("g").attr("transform",`translate(${margin.left},${margin.top})`);
   plot.append("g").attr("class","q2-grid").call(d3.axisBottom(x).ticks(4).tickSize(ih).tickFormat(""));
   plot.append("g").attr("class","q2-axis").call(d3.axisLeft(y).tickSize(0));
-  plot.selectAll("rect").data(data).join("rect").attr("x",0).attr("y",d=>y(d.remoteness)).attr("width",d=>x(d.bedDays)).attr("height",y.bandwidth()).attr("rx",3).attr("fill","#6BAED6")
+  plot.selectAll("rect").data(data).join("rect").attr("x",0).attr("y",d=>y(d.remoteness)).attr("width",d=>x(d.bedDays)).attr("height",y.bandwidth()).attr("rx",3).attr("fill","var(--chart-mid)")
     .on("pointerenter",(event,d)=>tip(event,d.remoteness,`${FORMAT.format(d.bedDays)} total bed days`)).on("pointermove",moveTip).on("pointerleave",hideTip);
   plot.selectAll("text.value").data(data).join("text").attr("class","q2-value-label").attr("x",d=>x(d.bedDays)+6).attr("y",d=>y(d.remoteness)+y.bandwidth()/2+3).text(d=>FORMAT.format(d.bedDays));
   svg.append("text").attr("class","q2-axis-title").attr("x",margin.left+iw/2).attr("y",height-5).attr("text-anchor","middle").text("Total bed days · 2021");
@@ -60,7 +60,7 @@ function renderStay(rows){
   const plot=svg.append("g").attr("transform",`translate(${margin.left},${margin.top})`);
   plot.append("g").attr("class","q2-grid").call(d3.axisBottom(x).ticks(4).tickSize(ih).tickFormat(""));
   plot.append("g").attr("class","q2-axis").call(d3.axisLeft(y).tickSize(0));
-  plot.selectAll("rect").data(data).join("rect").attr("x",0).attr("y",d=>y(d.remoteness)).attr("width",d=>x(d.bedDaysPerHospitalisation)).attr("height",y.bandwidth()).attr("rx",3).attr("fill","#9ECAE1")
+  plot.selectAll("rect").data(data).join("rect").attr("x",0).attr("y",d=>y(d.remoteness)).attr("width",d=>x(d.bedDaysPerHospitalisation)).attr("height",y.bandwidth()).attr("rx",3).attr("fill","var(--chart-blue-light)")
     .on("pointerenter",(event,d)=>tip(event,d.remoteness,`${d.bedDaysPerHospitalisation.toFixed(2)} bed days per hospitalisation · ${FORMAT.format(d.bedDays)} total bed days`)).on("pointermove",moveTip).on("pointerleave",hideTip);
   plot.selectAll("text.value").data(data).join("text").attr("class","q2-value-label").attr("x",d=>x(d.bedDaysPerHospitalisation)+6).attr("y",d=>y(d.remoteness)+y.bandwidth()/2+3).text(d=>d.bedDaysPerHospitalisation.toFixed(2));
   svg.append("text").attr("class","q2-axis-title").attr("x",margin.left+iw/2).attr("y",height-5).attr("text-anchor","middle").text("Average bed days per hospitalisation · 2021");
