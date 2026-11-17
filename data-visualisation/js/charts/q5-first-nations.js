@@ -1,6 +1,6 @@
 import { FORMAT } from "../config.js";
 
-const COLORS=["#3182BD","#6BAED6","#9ECAE1","#2171B5"];
+const COLORS=["var(--chart-blue)","var(--chart-mid)","var(--chart-blue-light)","var(--chart-deep)"];
 export function renderQ5Charts(rows){
   renderQ5MetricBars(rows,"#q5-hospitalisations-chart","hospitalisations","Hospitalisations · 2021",COLORS[0],d=>FORMAT.format(d.hospitalisations));
   renderQ5MetricBars(rows,"#q5-bed-days-chart","bedDays","Total bed days · 2021",COLORS[1],d=>FORMAT.format(d.bedDays));

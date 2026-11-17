@@ -11,8 +11,8 @@ export function renderQ1Chart(data){
   svg.append("title").text("Annual hospitalised road traffic injuries in Australia, 2011 to 2021");
   const defs=svg.append("defs");
   const grad=defs.append("linearGradient").attr("id","q1-area-gradient").attr("x1","0").attr("x2","0").attr("y1","0").attr("y2","1");
-  grad.append("stop").attr("offset","0%").attr("stop-color","#3182BD").attr("stop-opacity",.28);
-  grad.append("stop").attr("offset","100%").attr("stop-color","#3182BD").attr("stop-opacity",0);
+  grad.append("stop").attr("offset","0%").attr("stop-color","var(--chart-blue)").attr("stop-opacity",.28);
+  grad.append("stop").attr("offset","100%").attr("stop-color","var(--chart-blue)").attr("stop-opacity",0);
   const x=d3.scaleLinear().domain(d3.extent(data,d=>d.year)).range([0,iw]);
   const ext=d3.extent(data,d=>d.hospitalisations);
   const y=d3.scaleLinear().domain([Math.floor((ext[0]-1200)/2000)*2000,Math.ceil((ext[1]+1200)/2000)*2000]).nice().range([ih,0]);
