@@ -8,7 +8,9 @@ export function renderQ1Chart(data){
   const margin={top:42,right:25,bottom:45,left:65};
   const iw=width-margin.left-margin.right,ih=height-margin.top-margin.bottom;
   const svg=host.append("svg").attr("viewBox",`0 0 ${width} ${height}`).attr("role","img");
-  svg.append("title").text("Annual hospitalised road traffic injuries in Australia, 2011 to 2021");
+  const chartTitle=`Annual hospitalised road traffic injuries in Australia, ${data[0].year} to ${data.at(-1).year}`;
+  host.attr("aria-label",chartTitle);
+  svg.append("title").text(chartTitle);
   const defs=svg.append("defs");
   const grad=defs.append("linearGradient").attr("id","q1-area-gradient").attr("x1","0").attr("x2","0").attr("y1","0").attr("y2","1");
   grad.append("stop").attr("offset","0%").attr("stop-color","var(--chart-blue)").attr("stop-opacity",.28);
