@@ -28,12 +28,15 @@ async function init() {
       const first=Math.max(start,2018);
       const last=Math.min(end,2021);
       if(first>last){
+        document.querySelector("#q3-map-year").disabled=true;
+        document.querySelector("#q3-map-chart").innerHTML='<p class="q2-empty">The selected global year range does not overlap Q3 data. Q3 is available for 2018–2021.</p>';
         document.querySelector("#q3-grouped-chart").innerHTML='<p class="q2-empty">The selected global year range does not overlap Q3 data. Q3 is available for 2018–2021.</p>';
         document.querySelector("#q3-change-chart").innerHTML="";
         document.querySelector("#q3-insight-title").textContent="No overlapping years selected.";
         document.querySelector("#q3-insight-copy").textContent="Select a year range that includes at least one year from 2018 to 2021.";
         return;
       }
+      document.querySelector("#q3-map-year").disabled=false;
       renderQ3Charts(q3Data,first,last);
     }
 
